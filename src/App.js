@@ -58,15 +58,15 @@ function App() {
             alignItems: 'center',
             gap: '10px' 
           }}>
-            <button onClick={() => setIsRegistrando(true)} className="btn-link">
-              Cadastre-se aqui
-            </button>
+            <button onClick={() => setIsRegistrando(true)} className="btn-link"style={{ padding: '7px', borderRadius: '2px', border: 'none', backgroundColor:'#1e3c72', color: 'white', cursor: 'pointer', fontWeight: 'thin', fontSize: '0.8rem', marginTop: '10px', boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }} >
+          {'Cadastre-se aqui'}
+          </button>
             
-            <span style={{ color: '#ccc', fontSize: '0.8rem' }}>|</span>
             
-            <button onClick={() => setIsRecuperando(true)} className="btn-link">
-              Esqueci minha senha
-            </button>
+            
+            <button onClick={() => setIsRecuperando(true)} className="btn-link"style={{ padding: '7px', borderRadius: '2px', border: 'none', backgroundColor:'#1e3c72', color: 'white', cursor: 'pointer', fontWeight: 'thin', fontSize: '0.8rem', marginTop: '10px', boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }} >
+          {'Esqueci minha senha'}
+          </button>
           </div>
         </div>
       )}
@@ -75,4 +75,3 @@ function App() {
 }
 
 export default App;
-//fef

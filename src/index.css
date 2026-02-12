@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Adicione uma cor de fundo suave para destacar os cards */
+  background-color: #f4f7f9; 
+  color: #333;
+}
+
+/* Garante que o box-model seja fácil de calcular (ajuda no layout) */
+* {
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

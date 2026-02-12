@@ -1,0 +1,123 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.login-form {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+}
+
+.login-form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.login-form button {
+  padding: 10px;
+  background-color: #1e3c72;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilo dos links de cadastro e esqueci senha */
+.btn-link {
+  background: none;
+  border: none;
+  color: #1e3c72; 
+  cursor: pointer;
+  
+  font-size: 0.8rem;      
+  padding: 5px 10px;      
+  width: auto;            
+  margin: 5px auto;      
+  
+  text-decoration: none;  
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-link:hover {
+  color: #2a5298;
+  text-decoration: underline; 
+  transform: scale(1.02);    
+}
+
+.form-container {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+}
+
+.form-container h3 {
+  margin-top: 0;
+  color: #1e3c72;
+  font-size: 1.2rem;
+}
+
+/* Estilo para inputs e selects dentro do cadastro de cartão */
+.form-container input, 
+.form-container select {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: inherit;
+  box-sizing: border-box; 
+}
+
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2a5298;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #1e3c72;
+}
+
+/* Cards de Estatísticas do Dashboard */
+.card-stat {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  min-width: 180px;
+  text-align: center;
+  border-top: 4px solid #1e3c72; /* Detalhe visual de designer */
+}
+
+.card-stat h3 {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.card-stat p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}

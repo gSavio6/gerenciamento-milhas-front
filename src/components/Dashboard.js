@@ -6,6 +6,7 @@ import CadastroPrograma from './CadastroPrograma';
 import RegistrarCompra from './RegistrarCompra';
 import ModeracaoCompras from './ModeracaoCompras';
 import RelatorioCompras from './RelatorioCompras';
+import ListaProgramas from './ListaProgramas.js';
 
 function Dashboard() {
   const [stats, setStats] = useState({ totalPontos: 0, pontosPendentes: 0, totalCartoes: 0 });
@@ -75,11 +76,21 @@ function Dashboard() {
         /* VISÃO ADMINISTRADOR */
         <div className="admin-view">
           <div style={{ backgroundColor: '#fff4f4', padding: '25px', borderRadius: '12px', border: '1px solid #f5c6cb' }}>
+            <div style={{ display: 'flex', gap: '40px', flexWrap: 'wrap', marginBottom: '40px' }}>
+            <div style={{ flex: '1', minWidth: '350px' }}>
             <h3 style={{ color: '#721c24', marginBottom: '20px' }}>Configuração de Programas</h3>
             <CadastroPrograma aoSalvar={carregarDados} />
+            </div>
+            <div style={{  width: '3px', backgroundColor: '#dababd',margin: '0 20px'}} />
+            <div style={{ flex: '1', minWidth: '200px' }}>
+              <ListaProgramas key={chaveAtualizacao} />
+            </div>
           </div>
+          </div>
+          
           <hr style={{ border: '0.5px solid #eee', margin: '40px 0' }} />
           <ModeracaoCompras aoAtualizar={carregarDados} />
+          
         </div>
       ) : (
         /* VISÃO USUÁRIO */

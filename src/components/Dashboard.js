@@ -96,7 +96,7 @@ function Dashboard() {
             <div style={{ flex: '1', minWidth: '350px' }}>
               <CadastroCartao aoSalvar={carregarDados} />
               <hr style={{ margin: '25px 0', border: '0.1px solid #eee' }} />
-              <RegistrarCompra aoSalvar={carregarDados} />
+              <RegistrarCompra aoSalvar={carregarDados} chaveAtualizacao={chaveAtualizacao} />
             </div>
 
             {/* Coluna Única de Cartões */}

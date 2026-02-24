@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import api from '../services/api';
 
-function RegistrarCompra({ aoSalvar }) {
+function RegistrarCompra({ aoSalvar, chaveAtualizacao }) {
   const [valor, setValor] = useState('');
   const [descricao, setDescricao] = useState('');
   const [cartaoId, setCartaoId] = useState('');
@@ -13,7 +13,7 @@ function RegistrarCompra({ aoSalvar }) {
     api.get('/cartoes')
       .then(res => setCartoes(res.data))
       .catch(err => console.error("Erro ao buscar cartões", err));
-  }, []);
+  }, [chaveAtualizacao]);
 
   const handleRegistro = async (e) => {
     e.preventDefault();

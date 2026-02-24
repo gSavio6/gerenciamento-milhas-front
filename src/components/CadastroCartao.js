@@ -6,6 +6,7 @@ function CadastroCartao({ aoSalvar }) {
   const [bandeira, setBandeira] = useState('Visa');
   const [programas, setProgramas] = useState([]); // Lista vinda do banco
   const [programaId, setProgramaId] = useState(''); // ID selecionado
+  const [mensagemSucesso, setMensagemSucesso] = useState('');
 
   // Busca os programas cadastrados no backend
   useEffect(() => {
@@ -24,10 +25,13 @@ function CadastroCartao({ aoSalvar }) {
         programa: { id: programaId } //
       });
       
-      alert('Cartão cadastrado com sucesso!');
+      setMensagemSucesso('Cartão cadastrado com sucesso!');
       setNomePersonalizado('');
       setProgramaId(''); // Limpa a seleção após o sucesso
-      if (aoSalvar) aoSalvar(); 
+      if (aoSalvar) aoSalvar();
+      setTimeout(() => {
+        setMensagemSucesso('');
+      }, 5000); 
     } catch (error) {
       console.error(error);
       alert('Erro ao cadastrar cartão. Verifique se escolheu o programa de pontos.');
@@ -64,6 +68,11 @@ function CadastroCartao({ aoSalvar }) {
             <option key={p.id} value={p.id}>{p.nome}</option>
           ))}
         </select>
+        {mensagemSucesso && (
+          <p style={{ color: 'green', fontSize: '0.9rem', margin: '10px 0' }}>
+             {mensagemSucesso}
+          </p>
+        )}
 
         <button type="submit">Cadastrar Cartão</button>
       </form>
